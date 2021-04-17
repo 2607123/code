@@ -2,7 +2,7 @@ Context and goal of the project
 Considering the prevalent discussion of cryptocurrency and bitcoin in public and social media in a verbal or paper way, this project is trying to figure out the relationship between the sentiment of major media and bitcoin price based on the data obtained from previous month. The goal of this project is so analyse the most postive and negative words, a N-grams analyse and the correlation between the news and bitcoin price. The code is write in a file and separate with tab to seperate the different section. 
 
 Requirement
-To run this code it is recommanded to have python 3.6 or above and was run on spyder and pycharm.
+To run this code it is recommanded to have python 3.6 or above and was run on spyder and pycharm. Furtheremore, it is required to have a api key from newsapi. This key need to be filled in the 'Xxxxxxxxxxxxxx' and can be obtained via https://newsapi.org. 
 
 installment
 To run the code.py file the following package need to be installed:
