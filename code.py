@@ -15,17 +15,16 @@ pp = pprint.PrettyPrinter(indent=4)
 import nltk
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
-
 nltk.download('vader_lexicon')
 
 analyzer = SentimentIntensityAnalyzer()
 
-#api_news
+#api_news_key
 from newsapi import NewsApiClient
-newsapi = NewsApiClient(api_key=('9c4581cbdac94676817109e5c12d292c'))
+newsapi = NewsApiClient(api_key=('Xxxxxxxxxxxxxxxxxxxxxxxxxxxx'))
 print(newsapi)
 
-#function
+#functions
 
 def get_sentiment_scores(text, date, source, url):
     sentiment_scores = {}
@@ -84,7 +83,10 @@ def sentiment_to_df(sentiments):
     news_df.set_index("date", inplace=True)
     return news_df
 
-#get_data_btc
+
+
+
+#get_article datas
 
 topics = ['Bitcoin']
 #domains =['Reuters','TechCrunch','Entrepreneur','Wired','Business Insider','Harvard Business Review','The Verge']
@@ -129,8 +131,12 @@ def tokenizer(text):
 btc_df["tokens"] = btc_df["text"].apply(tokenizer)
 btc_df.head()
 
-#NGrams and Frequency Analysis
 
+
+
+
+
+#NGrams and Frequency Analysis
 from collections import Counter
 from nltk import ngrams
 
@@ -151,6 +157,11 @@ def token_count(tokens, N=20):
 
 token_count(flat_btc_tokens)
 
+
+
+
+
+
 #plot_scatter
 %matplotlib inline
 import matplotlib.pyplot as plt
@@ -167,6 +178,9 @@ import matplotlib.pyplot as plt
 plt.style.use('seaborn-whitegrid')
 import matplotlib as mpl
 mpl.rcParams['figure.figsize'] = [20.0, 10.0]
+
+
+
 
 
 # Generate the Bitcoin word cloud
