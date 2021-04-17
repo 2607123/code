@@ -333,4 +333,14 @@ plt.ylabel('date')
 plt.show()
 
 #correlation on close_price
+covariance_a =cov(btc_df_businessinsider['compound'],hist1D["Close"])
+
+#correlation on close_price
 cor_all= btc_df_all['compound'].corr(hist1D["Close"])
+cor_businessinsider = btc_df_businessinsider['compound'].corr(hist1D["Close"])
+cor_bbc= btc_df_bbc['compound'].corr(hist1D["Close"])
+cor_entrepreneur= btc_df_entrepreneur['compound'].corr(hist1D["Close"])
+cor_reuters= btc_df_Reuters['compound'].corr(hist1D["Close"])
+cor_techcrunch= btc_df_TechCrunch['compound'].corr(hist1D["Close"])
+cor_theverge= btc_df_theverge['compound'].corr(hist1D["Close"])
+cor_wired= btc_df_wired['compound'].corr(hist1D["Close"])
